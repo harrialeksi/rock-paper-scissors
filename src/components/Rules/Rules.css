@@ -1,0 +1,144 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+.rules-container{
+    text-align: center;
+}
+
+#rules-btn{
+    padding: 8px 2rem;
+    font-weight: bold;
+    border: 1px solid hsl(217, 16%, 45%);
+    border-radius: 7px;
+    background: none;
+    color: white;
+    position: absolute;
+    bottom : 2rem;
+    right: 2rem;
+    cursor: pointer;
+    -webkit-transition: background-color 0.15s;
+    -o-transition: background-color 0.15s;
+    transition: background-color 0.15s;
+}
+@media (max-width:900px) {
+    #rules-btn{
+        right: 50%;
+        -webkit-transform: translate(50%);
+            -ms-transform: translate(50%);
+                transform: translate(50%);
+    }
+}
+@media (hover:hover) {
+    #rules-btn:hover{
+        background-color: white;
+        color: rgb(19, 44, 119);
+    }
+}
+@media (hover:none) {
+    #rules-btn:active{
+        background-color: white;
+        color: rgb(19, 44, 119);
+    }
+}
+
+.on{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.404);
+  
+}
+#rule-container{
+    opacity: 0;
+    display: none;
+}
+.on #rule-container{
+    display: inline-block;
+    opacity: 1;
+    background-color: white;
+    border-radius: 1rem;
+    width: 40%;
+    max-width: 450px;
+    margin: auto;
+    padding: 1rem 2rem;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.rule-img{
+    width: 100%;
+    max-width: 450px;
+    height: 40vh;
+    background-color: antiquewhite;
+    background: url("/images/image-rules.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.on #rule-mini-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    
+    margin-bottom: 3rem;
+}
+@media (max-width:900px) {
+   .on #rule-container{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: unset;
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+   }
+   .on #rule-mini-container{
+        position: absolute;
+        top: 15%;
+        bottom: 0;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-bottom: unset;
+}
+i{
+    position: absolute;
+    bottom: 5%;
+}
+}
+
+i{
+    font-size: 2rem;
+    cursor: pointer;
+}

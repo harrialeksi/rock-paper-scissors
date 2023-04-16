@@ -1,0 +1,60 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+.game-container{
+    position: relative;
+    width: clamp(280px,70%,500px);
+    height: clamp(300px,30vw,400px);;
+    margin: auto;
+    position: relative;
+    background: url("bg-triangle.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
+#rockContainer{
+    right: -1rem;
+    top: -15%; 
+}
+#scissorsContainer{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: -2rem;
+}
+
+#paperContainer:hover,
+#rockContainer:hover
+{
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}
+#scissorsContainer:hover{
+    -webkit-transform: translate(-50%) scale(1.05);
+        -ms-transform: translate(-50%) scale(1.05);
+            transform: translate(-50%) scale(1.05);
+}
+
+#paperContainer,
+#rockContainer,
+#scissorsContainer{
+    position: absolute; 
+    z-index: 998;
+    -webkit-transition: -webkit-transform 0.15s;
+    transition: -webkit-transform 0.15s;
+    -o-transition: transform 0.15s;
+    transition: transform 0.15s;
+    transition: transform 0.15s, -webkit-transform 0.15s;
+}
+#paperContainer{
+    left: -1rem;
+    top: -15%;
+}

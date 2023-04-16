@@ -1,0 +1,68 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+
+.header-container{
+    width: 70%;
+    min-width: 280px;
+    margin: auto;
+    border: 1px solid hsl(217, 16%, 45%);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 6rem;
+}
+@media (max-width:900px) {
+    .header-container{
+        margin-bottom: 4rem;
+    }
+}
+h1{
+    text-align: left;
+    color: hsl(217, 16%, 45%);
+    color: white;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem,2vw,3rem);
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+}
+
+.score-container{
+    background-color: white;
+    padding: 10px 2.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.5rem;
+    color: hsl(229, 64%, 46%);
+}
+#reminder{
+    color: white;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+@media (max-width:800px) {
+    #reminder{
+        display: none;
+    }
+}
+.score{
+    font-size: 4rem;
+    color: hsl(229, 25%, 31%);
+}

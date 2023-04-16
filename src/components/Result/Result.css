@@ -1,0 +1,200 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+
+
+#off{
+    display: none;
+}
+
+.result-container{
+    position: relative;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+             justify-content: space-between;
+    width: 70%;
+     min-width: 300px;
+     max-width: 1000px;
+     margin: auto;
+}
+@media (max-width:900px) {
+    
+}
+.player-mask{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: clamp(70px, 20vw,155px);
+    height: clamp(70px, 20vw,155px);
+    border-radius: 8rem;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.236);
+    z-index: 0;
+}
+.player-container{
+
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+}
+.player-container h2{
+    color: white;
+    font-size: 1.3rem;
+}
+#resultChoice,
+#computerResultChoice{
+    opacity: 0;
+    z-index: 999;
+    position: relative;
+    -webkit-animation: appear 0.5s;
+            animation: appear 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+#computerResultChoice{
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+}
+.outcome-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-animation: outcomeAppear 0.1s;
+            animation: outcomeAppear 0.1s;
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+@-webkit-keyframes outcomeAppear {
+    from{
+        opacity: 0;
+        -webkit-transform:  scale(3);
+                transform:  scale(3);
+    }
+    to{
+        
+        -webkit-transform:  scale(1);
+        
+                transform:  scale(1);
+        opacity: 1;
+    }
+}
+@keyframes outcomeAppear {
+    from{
+        opacity: 0;
+        -webkit-transform:  scale(3);
+                transform:  scale(3);
+    }
+    to{
+        
+        -webkit-transform:  scale(1);
+        
+                transform:  scale(1);
+        opacity: 1;
+    }
+}
+
+#outcome{
+    font-size: 2rem;
+    color: white;
+}
+#play-again{
+    background-color: white;
+    color:  black;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 13px 2rem;
+    -webkit-transition: background-color 0.15s,color 0.15s;
+    -o-transition: background-color 0.15s,color 0.15s;
+    transition: background-color 0.15s,color 0.15s;
+    cursor: pointer;
+}
+@media (hover:hover) {
+    #play-again:hover{
+        color: white;
+        background-color: transparent;
+    }
+    #play-again:active{
+        -webkit-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+                transform: scale(0.95);
+    }
+}
+@media (hover:none) {
+    #play-again:active{
+        color: white;
+        background-color: transparent;
+    }
+}
+
+@media (max-width:900px) {
+    .outcome-container{
+        opacity: 1;
+        -webkit-animation: none;
+                animation: none;
+        position: absolute;   
+        left: 50%;
+        bottom: -80%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%); 
+    }
+}
+@-webkit-keyframes appear {
+    from{
+        opacity: 0;
+        -webkit-transform: scale(3);
+                transform: scale(3);
+    }
+    to{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes appear {
+    from{
+        opacity: 0;
+        -webkit-transform: scale(3);
+                transform: scale(3);
+    }
+    to{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        opacity: 1;
+    }
+}
